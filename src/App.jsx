@@ -1,14 +1,12 @@
 import { useState } from 'react'
 import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
+import Home from './components/home/home'
+function App(){
 
   return (
-    <>
-     <h1>hello world</h1>
-    </>
+    <div className='app'>
+     <Home/>
+    </div>
   )
 }
-
 export default App
