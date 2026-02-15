@@ -1,0 +1,11 @@
+.poster {
+  width: 150px;             
+  object-fit: contain;
+  margin-right: 10px;
+  transition: transform 0.3s ease;   
+  cursor: pointer;
+}
+
+.poster:hover {
+  transform: scale(1.08);    
+}
