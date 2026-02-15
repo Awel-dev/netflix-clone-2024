@@ -1,12 +1,14 @@
 import React from 'react'
 import Header from '../header/header'
 import Footer from '../footer/footer'
-import Requests from '../../utils/requests'
+import Banner from '../../utils/Banner'
+// import Requests from '../../utils/requests'
 function home() {
   return (
     <div>
       <Header/>
-      <Requests/>
+      {/* <Requests/> */}
+      <Banner/>
       <Footer/>
     </div>
   )
