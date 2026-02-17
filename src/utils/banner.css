@@ -1,85 +1,80 @@
-.banner{
-    box-sizing: border-box;
-     display: flex;
-    flex-direction: column;
-    margin-top: 10vh;
-    height: 80vh;
-    color: white;
-    object-fit: contain;
+.banner {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  align-items: flex-end; /* content stays inside bottom */
+  height: 80vh;
+  min-height: 300px; /* prevents too-small banners */
+  color: white;
+  overflow: hidden;
 }
-.banner-content{
-    margin-left: 30px;
-    padding-top: 300px;
-}
-.banner-title{
-    font-size: 3rem;
-    font-weight: 800;
-    padding-bottom: 0.3rem;
 
+/* Content container */
+.banner-content {
+  padding: 2rem;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
-.discription{
-    width: 45rem;
-    line-height: 1;
-    padding: 1rem,0;
-    font-size: 1rem;
-    max-width: 360px;
-    height: 80px;
+
+/* Responsive title */
+.banner-title {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: 800;
 }
-.banner-buttons{
-    height: 50px;
-    display: inline;
-    color: #fff;
-    outline: none;
-    border: none;
-    font-size: 1.2rem;
-    font-weight: 700;
-    border-radius: 0.2vw;
-    padding: 1rem,2rem;
-    margin-right: 2rem;
+
+/* Buttons layout */
+.banner-buttons {
+  display: flex;
+  gap: 1rem;
 }
-.play{
-     border: none;
-    font-size: 1.2rem;
-    font-weight: 700;
-    border-radius: 0.2vw;
-    padding: 1rem,2rem;
-     cursor: pointer;
-    width: 100px;
-    height: 35px;
-    color: #000;
-    background-color: #fff;
-    margin-top: 10px;
-    margin-right: 50px;
-    margin-bottom: 10px;
+
+/* Buttons */
+.play,
+.list {
+  border: none;
+  font-size: clamp(0.8rem, 1.5vw, 1.1rem);
+  font-weight: 700;
+  border-radius: 4px;
+  width: 110px;
+  height: 40px;
 }
-.list{
-     border: none;
-    font-size: 1.2rem;
-    font-weight: 700;
-    border-radius: 0.2vw;
-    padding: 1rem,2rem;
-     cursor: pointer;
-     background-color:rgba(51, 51, 51, 0.5);
-     color: #fff;
-     height:35px;
-     width: 100px;
+
+.play {
+  cursor: pointer;
+  color: #000;
+  background-color: #fff;
 }
-.play:hover{
-    background-color:#c6c6c6 ;
+
+.list {
+  cursor: pointer;
+  background-color: rgba(51, 51, 51, 0.6);
+  color: #fff;
 }
-.list:hover{
-    background-color:#c6c6c6 ;
+
+.play:hover,
+.list:hover {
+  background-color: #c6c6c6;
 }
+
+/* Responsive description */
+.discription {
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
+  line-height: 1.4;
+  max-width: 500px;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Fade effect */
 .fade-bottom {
-    margin-top: 70vh;
-    box-sizing: border-box;
   position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  height: 10vh; 
-
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    #1d1c1c   
-   ); 
-}  
+  height: 20%;
+  background: linear-gradient(to bottom, transparent, #1d1c1c);
+}

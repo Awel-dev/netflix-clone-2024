@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react'
 import movietrailer from "movie-trailer";
 import "./row.css"
@@ -21,7 +20,6 @@ const Row = ({ fetchURL, title }) => {
     else{
       movietrailer(movie?.title||movie?.name||movie?.original_name)
       .then((url)=>{
-        console.log(url)
         const urlParams=new URLSearchParams(new URL(url).search)
         setTraileUrl(urlParams.get('v'))
       })
@@ -29,7 +27,7 @@ const Row = ({ fetchURL, title }) => {
   }
 
   const opts={
-    height:"600px",
+    height:"500px",
     width:"100%",
     playerVars:{autoplay:1}
   }
@@ -59,4 +57,3 @@ const Row = ({ fetchURL, title }) => {
 }
 
 export default Row
-
