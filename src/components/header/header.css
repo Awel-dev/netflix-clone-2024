@@ -29,8 +29,7 @@
 }
 
 .nav-menu {
-  display: flex;
-  flex-wrap: wrap;      
+  display: none;   
   gap: 8px 12px;
   list-style: none;
   max-width: 60vw;
